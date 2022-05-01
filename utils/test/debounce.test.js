@@ -1,5 +1,8 @@
-import { debounce } from '..';
+import { debounce, createElement, getRoot } from '..';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
+export const testDebounce = () => {
+  const app = getRoot();
+  const input = createElement('input', app);
+  console.log('test debounce');
+  console.log('test debounce');
+};
