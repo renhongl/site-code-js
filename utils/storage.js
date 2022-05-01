@@ -1,17 +1,31 @@
-export function getItem(key) {
-  let storage = window.localStorage.getItem(nameSpace);
-  if (!storage) {
-    storage = {};
-  } else {
-    storage = JSON.parse(storage);
+export class Storage {
+  constructor(nameSpace) {
+    this.nameSpace = nameSpace;
   }
-  const result = storage[key] || '';
-  return result;
-}
 
-export function storage(val = 'default') {
-  let nameSpace = val;
-  return function () {
-    return [getItem];
-  };
+  _getStorage() {
+    return window.localStorage.getItem(this.nameSpace);
+  }
+
+  getItem(key) {
+    let storage = this._getStorage();
+    if (!storage) {
+      return null;
+    } else {
+      storage = JSON.parse(storage);
+      const result = storage[key] || '';
+      return result;
+    }
+  }
+
+  setItem(key, val) {
+    let storage = this._getStorage();
+    if (!storage) {
+      storage = {};
+    } else {
+      storage = JSON.parse(storage);
+    }
+    storage[key] = val;
+    window.localStorage.setItem(this.nameSpace, JSON.stringify(storage));
+  }
 }

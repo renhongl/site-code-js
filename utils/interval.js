@@ -1,7 +1,7 @@
 export function interval(fn, count = -1, delay = 1000) {
   let n = 0;
   let timer = null;
-  return (...args) => {
+  return function (...args) {
     const context = this;
     console.log('this in interval: ', this);
     timer = setInterval(() => {

@@ -6,4 +6,5 @@ import { utilsTests } from './test';
 // utilsTests.testDebounce();
 // utilsTests.testThrottle();
 // utilsTests.testLog();
-utilsTests.testStorage();
+// utilsTests.testStorage();
+utilsTests.testRouter();
