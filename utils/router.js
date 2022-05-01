@@ -24,6 +24,8 @@ export class Router {
     const path = window.location.hash;
     if (this.routes.has(path)) {
       this.routes.get(path)();
+    } else {
+      throw new Error('no router set for: ' + path);
     }
   }
 }
