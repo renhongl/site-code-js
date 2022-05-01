@@ -1,3 +1,1 @@
-import { testDebounce } from './utils/test/index.test';
-
-testDebounce();
+export * as utilsTests from './utils/test/index.test';
