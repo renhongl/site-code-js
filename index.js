@@ -1,21 +1,23 @@
 // Import stylesheets
 import './style.css';
 
-import {
-  testRouter,
-  testInterval,
-  testDoubleBind,
-  testLog,
-  testDebounce,
-  testThrottle,
-  testReact,
-} from './test';
+// import
+// testRouter,
+// testInterval,
+// testDoubleBind,
+// testLog,
+// testDebounce,
+// testThrottle,
+// testReact,
+// testDebounceHtml,
+// './test';
 
 // testInterval();
 // testDoubleBind();
 // testRouter();
 // testLog();
 
-testDebounce();
+// testDebounce();
 // testThrottle();
 // testReact();
+// testDebounceHtml();

@@ -1,16 +1,11 @@
 export function log(fn, type = 'log') {
   const map = {
-    log: (data) => {
-      console.log(data);
-    },
-    warn: (data) => {
-      console.warn(data);
-    },
-    error: (data) => {
-      console.error(data);
-    },
+    log: console.log,
+    warn: console.warn,
+    error: console.error,
   };
-  return function (...args) {
+  return (...args) => {
+    console.log('this in log: ', this);
     const context = this;
     const result = fn.apply(context, args);
     map[type](result);

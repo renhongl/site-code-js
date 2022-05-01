@@ -14,6 +14,7 @@ export function throttleTimer(fn, delay = 1000) {
 export function throttle(fn, delay = 1000) {
   let before = Date.now();
   return function (...args) {
+    console.log('this in throttle: ', this);
     const context = this,
       now = Date.now();
     if (now - before > delay) {
