@@ -45,6 +45,8 @@
 - Ajax
 - Fetch
 - Fetch 封装 Ajax
+- 使用文档碎片减少 DOM 请求
+- 事件代理
 
 ## React 原理
 

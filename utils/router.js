@@ -29,3 +29,31 @@ export class Router {
     }
   }
 }
+
+export function useRouter() {
+  const routes = new Map();
+  window.addEventListener('hashchange', _onHashChange, false);
+  function _onHashChange(e) {
+    const path = window.location.hash;
+    if (routes.has(path)) {
+      routes.get(path)();
+    } else {
+      throw new Error('no router set for: ' + path);
+    }
+  }
+  return {
+    setRoute: function (path, fn) {
+      if (!path.startsWith('#')) {
+        path = '#' + path;
+      }
+      if (!routes.has(path)) {
+        routes.set(path, fn);
+      } else {
+        throw new Error('route already exsited');
+      }
+    },
+    linkTo: function (path) {
+      window.location.hash = path;
+    },
+  };
+}
