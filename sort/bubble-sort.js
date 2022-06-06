@@ -1,4 +1,4 @@
-const bubbleSort = (nums) => {
+export const bubbleSort = (nums) => {
   for (let i = 0, len = nums.length; i < len - 1; i++) {
     for (let j = 0; j < len - 1 - i; j++) {
       if (nums[j] > nums[j + 1]) {

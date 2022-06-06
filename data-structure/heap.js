@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class Heap {
+export class Heap {
   constructor() {
     this._root = null;
   }

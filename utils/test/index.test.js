@@ -3,3 +3,4 @@ export * from './throttle.test';
 export * from './log.test';
 export * from './storage.test';
 export * from './router.test';
+export * from './image-proxy.test';

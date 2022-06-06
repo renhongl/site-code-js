@@ -9,7 +9,7 @@ class Node {
   }
 }
 
-class LinkedList {
+export class Queue {
   constructor() {
     this._head = null;
     this._size = 0;

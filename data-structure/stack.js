@@ -9,7 +9,7 @@ class Node {
   }
 }
 
-class LinkedList {
+export class Stack {
   constructor() {
     this._head = null;
     this._size = 0;

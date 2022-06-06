@@ -1,4 +1,4 @@
-const quickSort = (nums) => {
+export const quickSort = (nums) => {
   if (nums.length <= 1) {
     return nums;
   }

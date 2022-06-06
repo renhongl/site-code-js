@@ -57,7 +57,7 @@ const createMaxHeap = (nums, len) => {
   }
 };
 
-const heapSort = (nums) => {
+export const heapSort = (nums) => {
   for (let i = nums.length - 1; i >= 0; i--) {
     createMaxHeap(nums, i + 1);
     let max = nums[0];

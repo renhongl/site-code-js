@@ -1,4 +1,4 @@
-const insertionSort = (nums) => {
+export const insertionSort = (nums) => {
   for (let i = 1, len = nums.length; i < len; i++) {
     let j = i;
     while (j > 0 && nums[j] < nums[j - 1]) {

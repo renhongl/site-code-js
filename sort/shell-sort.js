@@ -1,4 +1,4 @@
-const shellSort = (nums) => {
+export const shellSort = (nums) => {
   for (
     let gap = Math.floor(nums.length / 2);
     gap > 0;

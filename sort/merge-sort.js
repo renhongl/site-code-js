@@ -10,7 +10,7 @@ const merge = (left, right) => {
   return [...result, ...left, ...right];
 };
 
-const mergeSort = (nums) => {
+export const mergeSort = (nums) => {
   if (nums.length <= 1) {
     return nums;
   }

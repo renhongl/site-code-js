@@ -1,4 +1,4 @@
-const selectionSort = (nums) => {
+export const selectionSort = (nums) => {
   for (let i = 0, len = nums.length; i < len - 1; i++) {
     let minIndex = i;
     for (let j = i + 1; j < len; j++) {

@@ -1,4 +1,4 @@
-class SequenceList {
+export class SequenceList {
   constructor() {
     this._list = [];
   }

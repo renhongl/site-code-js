@@ -7,4 +7,5 @@ import { utilsTests } from './test';
 // utilsTests.testThrottle();
 // utilsTests.testLog();
 // utilsTests.testStorage();
-utilsTests.testRouter();
+// utilsTests.testRouter();
+utilsTests.testImageProxy();
