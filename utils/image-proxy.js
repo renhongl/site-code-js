@@ -14,16 +14,16 @@ const loadImage = (url) => {
 };
 
 export function loadImageProxy(url, target) {
+  const loading =
+    'https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831';
   return new Promise((resolve, reject) => {
-    const loading =
-      'https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831';
     loadImage(loading).then(() => {
       target.style.backgroundImage = `url(${url})`;
     });
     const img = loadImage(url)
       .then(() => {
         setTimeout(() => {
-          resolve(img);
+          resolve();
         }, 2000);
       })
       .catch((err) => {
