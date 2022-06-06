@@ -1,10 +1,10 @@
 // image proxy
 
-const loadImage = (url) => {
+export const loadImage = (url) => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => {
-      resolve(img);
+      resolve();
     };
     img.onerror = (err) => {
       reject(err);
@@ -16,11 +16,11 @@ const loadImage = (url) => {
 export function loadImageProxy(url, target) {
   const loading =
     'https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831';
+  loadImage(loading).then(() => {
+    target.style.backgroundImage = `url(${loading})`;
+  });
   return new Promise((resolve, reject) => {
-    loadImage(loading).then(() => {
-      target.style.backgroundImage = `url(${url})`;
-    });
-    const img = loadImage(url)
+    loadImage(url)
       .then(() => {
         setTimeout(() => {
           resolve();
