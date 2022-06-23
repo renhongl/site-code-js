@@ -6,3 +6,5 @@ export * from './common';
 export * from './storage';
 export * from './router';
 export * from './image-proxy';
+export * from './call';
+export * from './apply';
