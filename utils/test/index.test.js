@@ -6,3 +6,4 @@ export * from './router.test';
 export * from './image-proxy.test';
 export * from './call.test';
 export * from './apply.test';
+export * from './bind.test';

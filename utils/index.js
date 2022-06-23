@@ -8,3 +8,4 @@ export * from './router';
 export * from './image-proxy';
 export * from './call';
 export * from './apply';
+export * from './bind';
