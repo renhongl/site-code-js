@@ -8,4 +8,7 @@ import { utilsTests } from './test';
 // utilsTests.testLog();
 // utilsTests.testStorage();
 // utilsTests.testRouter();
-utilsTests.testImageProxy();
+// utilsTests.testImageProxy();
+import Marker from './components/marker';
+
+new Marker();
